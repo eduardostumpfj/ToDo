@@ -1,0 +1,75 @@
+/*@import './base.css';*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Principal ------------------------------------------------------------------------------------------- */
+.-bg--gradient{
+  background: #C6FFDD;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.-glass{
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  outline: 1px solid rgba(255, 255, 255, 0.15);
+}
+ .-h-100svh{
+  height: 100vh;
+  height: 100svh;
+ }
+
+.-shadow--button {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.-shadow--lg{
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+}
+.-shadow-md{
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+}
+.-shadow--double {
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.10), 0 4px 10px 0 rgba(0, 0, 0, 0.10) ;
+}
+.-grid-cols{
+  grid-template-rows: max-content repeat(2, min-content);
+}
+@media(max-width: 640px){
+  .-bg--gradient{
+    background-size: 200%;
+  }
+}
